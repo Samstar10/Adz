@@ -259,10 +259,11 @@ button[type="submit"]:hover {
     }
 
     .description-text-container{
-        max-width: 580px;
+        /* max-width: 580px; */
         margin: 0 auto;
         padding: 15px;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         height: auto;
@@ -273,7 +274,7 @@ button[type="submit"]:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center
+        align-items: center;
     }
 
     .description-title{

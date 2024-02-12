@@ -81,7 +81,8 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*", "input": "./node_modules/intl-tel-input/build/img/", "output": "/assets/img/" }
             ],
             "styles": [
               "src/styles.css",

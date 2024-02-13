@@ -7,7 +7,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '~intl-tel-input/build/css/intlTelInput.css';
+/* @import '~intl-tel-input/build/css/intlTelInput.css'; */
 
 /* .iti__flag {background-image: url("../node_modules/f");}
 

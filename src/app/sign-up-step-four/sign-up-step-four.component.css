@@ -1,0 +1,385 @@
+.container{
+    color: #cfcfcf;
+    min-height: 100vh;
+    /* top: -630px;
+    left: -932px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.description-container {
+    position: relative;
+    /* text-align: c; */
+    color: white;
+    padding: 60px;
+    width: 920px;
+    height: 100%;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.description-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(21,32,166,0.88), rgba(253,106,2,0.88));
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+}
+
+.description-container img.logo {
+    position: relative;
+    z-index: 2;
+    display: flex;
+}
+
+.description-container h2,
+.description-container p {
+    position: relative;
+    z-index: 2;
+    font-family: 'poppins', sans-serif;
+}
+
+.description-container {
+    background-image: url('../../assets/login-img.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.description-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    width: 290px;
+    height: 49px;
+}
+
+.description-title {
+    width: 580px;
+    height: 60px;
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 60px;
+    letter-spacing: 0.5px;
+    margin-top: 120px;
+}
+
+
+.description-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 580px;
+    height: 449px;
+}
+
+.description-description{
+    width: 580px;
+    height: 240px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 30px;
+    margin-top: 40px;
+}
+
+.description-text-1 {
+    margin-bottom: 40px;
+}
+
+.sign-in-container {
+    width: 960px;
+    height: 100%;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 580px;
+    height: 1036px;
+}
+
+.sign-in-image {
+    width: 400px;
+    height: 400px;
+}
+
+.sign-in-title {
+    width: 141px;
+    height: 60px;
+    text-align: center;
+    left: 1320px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 60px;
+    color: rgba(28,27,31,1);
+}
+
+.sign-in-step{
+    width: 85px;
+    height: 24px;
+    font-family: 'poppins';
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(0,0,0,1);
+}
+
+.progress-bar{
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.progress {
+    height: 100%;
+    float: left;
+    background-color: rgba(253,106,2,1);
+    border-radius: 100px;
+}
+
+.upload-container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.file-upload {
+    /* padding: 20px; */
+    text-align: center;
+    width: 100%;
+    height: 139px;
+}
+
+.upload-label {
+    display: block;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    width: 180px;
+    height: 21px;
+    font-family: 'poppins';
+    font-size: 0.875rem;
+    color: rgba(28,27,31,1);
+}
+
+.upload-area-container {
+    border: 2px solid rgba(194,194,194,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-area {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 139px;
+}
+
+.upload-icon {
+    width: 96px;
+    height: 62px;
+}
+
+.upload-area p {
+    margin-top: 10px;
+    color: #aaa;
+    width: 272px;
+    height: 21px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+button[type="submit"] {
+    background-color: rgba(253,106,2,1); 
+    color: rgba(252,252,252,1);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 48px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e66800;
+}
+  
+.already-account {
+    /* width: 327px;
+    height: 24px; */
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgba(28,27,31,1);
+}
+  
+.already-account a {
+    color: rgba(253, 106, 2, 1);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .description-container,
+    .sign-in-container {
+      width: 100%;
+      margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1650px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        gap: 110px;
+    }
+
+    .description-text-container{
+        /* max-width: 580px; */
+        margin: 0 auto;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        /* overflow: hidden; */
+    }
+
+    .description-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .description-title{
+        font-size: calc(2rem - 0.2rem);
+    }
+
+    .description-description, .description-text-1, .description-text-2{
+        font-size: calc(1rem - 0.2rem);
+    }
+
+    .description-text-2{
+        margin-top: 10px;
+    }
+
+    .logo{
+        width: 200px;
+        height: 30px;
+    }
+
+    .description-title{
+        font-size: 1.5rem;
+        margin-top: 40px;
+    }
+
+    .description-description{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .sign-in-form-container {
+        width: 400px;
+        height: 700px;
+    }
+    .sign-in-title {
+        font-size: 2rem;
+    }
+    .progress-bar {
+        width: 100%;
+        height: 7px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .sign-in-image {
+        width: 220px;
+        height: 220px;
+    }
+    .sign-in-step {
+        font-size: 0.875rem;
+    }
+    .upload-container{
+        gap: 7.5px;
+        margin-bottom: 0;
+    }
+    .upload-label {
+        font-size: 0.75rem;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    .upload-area {
+        width: 100%;
+        height: 100px;
+    }
+    .upload-icon {
+        width: 60px;
+        height: 40px;
+    }
+    .upload-area p {
+        margin-top: 5px;
+        font-size: 0.75rem;
+    }
+    button[type="submit"] {
+        font-size: 0.75rem;
+        margin-bottom: 10px;
+        height: 36px;
+    }
+    .already-account {
+        font-size: 0.875rem;
+    }
+}

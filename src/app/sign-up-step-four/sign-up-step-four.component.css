@@ -1,20 +1,16 @@
 .container{
     color: #cfcfcf;
     min-height: 100vh;
-    /* top: -630px;
-    left: -932px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
-    padding: 5px;
     box-sizing: border-box;
 }
 
 .description-container {
     position: relative;
-    /* text-align: c; */
     color: white;
     padding: 60px;
     width: 920px;
@@ -258,8 +254,6 @@ button[type="submit"]:hover {
 }
   
 .already-account {
-    /* width: 327px;
-    height: 24px; */
     font-family: 'poppins', sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -298,7 +292,6 @@ hr {
     }
 
     .description-text-container{
-        /* max-width: 580px; */
         margin: 0 auto;
         padding: 15px;
         display: flex;
@@ -306,7 +299,6 @@ hr {
         flex-direction: column;
         justify-content: center;
         height: auto;
-        /* overflow: hidden; */
     }
 
     .description-container{

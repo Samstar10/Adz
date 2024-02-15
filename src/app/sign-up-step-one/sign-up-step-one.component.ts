@@ -1,25 +1,20 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import intlTelInput from 'intl-tel-input';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up-step-one',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterModule
+  ],
   templateUrl: './sign-up-step-one.component.html',
   styleUrl: './sign-up-step-one.component.css'
 })
-export class SignUpStepOneComponent implements AfterViewInit {
-  @ViewChild('phoneInput')
-  phoneInput!: ElementRef;
+export class SignUpStepOneComponent {
 
-  private iti: any
-
-  ngAfterViewInit(): void {
-    this.iti = intlTelInput(this.phoneInput.nativeElement, {
-      initialCountry: 'ke',
-      separateDialCode: true,
-      utilsScript: "node_modules/intl-tel-input/build/js/intlTelInput.js"
-    })
+  constructor(private router: Router){}
+  
+  redirectTo(){
+    this.router.navigate(['/sign-up-two']);
   }
-
 }

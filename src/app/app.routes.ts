@@ -4,6 +4,7 @@ import { SignUpStepOneComponent } from './sign-up-step-one/sign-up-step-one.comp
 import { SignUpStepTwoComponent } from './sign-up-step-two/sign-up-step-two.component';
 import { SignUpStepThreeComponent } from './sign-up-step-three/sign-up-step-three.component';
 import { SignUpStepFourComponent } from './sign-up-step-four/sign-up-step-four.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path: 'sign-up-four',
         component: SignUpStepFourComponent
+    },
+    {
+        path: 'dashboard',
+        component: DashboardComponent
     }
 ];

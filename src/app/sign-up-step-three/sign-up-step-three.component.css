@@ -8,7 +8,6 @@
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
-    padding: 5px;
     box-sizing: border-box;
 }
 
@@ -234,7 +233,7 @@
     text-align: center;
 }
 
-button[type="submit"] {
+button[type="button"] {
     background-color: rgba(253,106,2,1); 
     color: rgba(252,252,252,1);
     padding: 10px 15px;
@@ -249,7 +248,7 @@ button[type="submit"] {
     height: 48px;
 }
 
-button[type="submit"]:hover {
+button[type="button"]:hover {
     background-color: #e66800;
 }
   
@@ -372,7 +371,7 @@ button[type="submit"]:hover {
         margin-top: 5px;
         font-size: 0.75rem;
     }
-    button[type="submit"] {
+    button[type="button"] {
         font-size: 0.75rem;
         margin-bottom: 10px;
         height: 36px;

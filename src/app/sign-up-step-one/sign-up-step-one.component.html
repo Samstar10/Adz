@@ -43,7 +43,7 @@
                     <label for="terms-checkbox">I consent to the <a href="#" class="terms-link">Terms and Conditions</a></label>
                 </div>
                 <button type="button" (click)="redirectTo()">Continue</button>
-                <p>Already have an account? <a href="#">Sign In</a></p>
+                <p>Already have an account? <a [routerLink]="['/login']">Sign In</a></p>
             </div>
         </div>
     </div>

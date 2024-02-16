@@ -20,17 +20,24 @@ export class SignUpStepOneComponent {
   adminUsername: string = '';
   phoneNumber: string = '';
   password: string = '';
+  confirmPassword: string = '';
 
   constructor(private router: Router, private signUpService: SignUpServiceService){}
   
   redirectTo(){
-    this.signUpService.updateData({
-      companyName: this.companyName,
-      companyEmail: this.companyEmail,
-      adminUsername: this.adminUsername,
-      phoneNumber: this.phoneNumber,
-      password: this.password
-    })
-    this.router.navigate(['/sign-up-two']);
+    if(this.companyName === '' || this.companyEmail === '' || this.adminUsername === '' || this.phoneNumber === '' || this.password === ''){
+      alert('Please fill all fields');
+    }else if(this.password !== this.confirmPassword){
+      alert('Passwords do not match');
+    }else{
+      this.signUpService.updateData({
+        companyName: this.companyName,
+        companyEmail: this.companyEmail,
+        adminUsername: this.adminUsername,
+        phoneNumber: this.phoneNumber,
+        password: this.password
+      })
+      this.router.navigate(['/sign-up-two']);
+    }
   }
 }

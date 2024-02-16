@@ -24,6 +24,44 @@
       "companyByLaws": "",
       "companyLogo": "",
       "companyThemeColor": ""
+    },
+    {
+      "id": "db9c",
+      "companyName": "",
+      "companyEmail": "",
+      "adminUsername": "",
+      "phoneNumber": "",
+      "password": "",
+      "confirmPassword": "",
+      "companySize": "",
+      "currency": "",
+      "certOfRegistration": "",
+      "companyByLaws": "",
+      "companyLogo": "",
+      "companyThemeColor": ""
+    },
+    {
+      "id": "016b",
+      "closed": false,
+      "currentObservers": null,
+      "observers": [],
+      "isStopped": false,
+      "hasError": false,
+      "thrownError": null,
+      "_value": {
+        "companyName": "",
+        "companyEmail": "",
+        "adminUsername": "",
+        "phoneNumber": "",
+        "password": "",
+        "confirmPassword": "",
+        "companySize": "",
+        "currency": "",
+        "certOfRegistration": "",
+        "companyByLaws": "",
+        "companyLogo": "",
+        "companyThemeColor": ""
+      }
     }
   ]
 }

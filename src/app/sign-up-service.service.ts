@@ -25,10 +25,12 @@ export class SignUpServiceService {
   constructor(private http: HttpClient) { }
 
   updateData(data: Partial<SignUpData>) {
+    console.log('Sign Up Data',data);
     this.signUpdata = { ...this.signUpdata, ...data };
   }
 
   submitData(): Observable<any> {
+    console.log('Sign Up Data',this.signUpdata);
     return this.http.post('http://localhost:3000/users', this.signUpdata);
   }
 }

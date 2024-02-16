@@ -23,17 +23,17 @@
                     <!-- <input type="email" name="email" id="email" class="email-input" placeholder="samuelmuli95@gmail.com"> -->
                     <select name="company-size" id="" required [(ngModel)]="companySize">
                         <option value="" disabled selected>50-100</option>
-                        <option value="small">0 - 50</option>
-                        <option value="medium">50 - 100</option>
-                        <option value="large">100+</option>
+                        <option value="0-50">0 - 50</option>
+                        <option value="50-100">50 - 100</option>
+                        <option value="100+">100+</option>
                     </select>
                     <hr>
                     <label for="password">Currency</label>
                     <select name="currency" id="" required [(ngModel)]="currency">
                         <option value="" disabled selected>KES</option>
-                        <option value="small">KES</option>
-                        <option value="medium">USD</option>
-                        <option value="large">EUR</option>
+                        <option value="KES">KES</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
                     </select>
                     <hr>
                 </form>

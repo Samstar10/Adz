@@ -32,6 +32,7 @@ export class SignUpStepOneComponent {
     }else if(this.password !== this.confirmPassword){
       alert('Passwords do not match');
     }else{
+      console.log(this.companyName, this.companyEmail, this.adminUsername, this.phoneNumber);
       this.signUpService.updateData({
         companyName: this.companyName,
         companyEmail: this.companyEmail,

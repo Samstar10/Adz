@@ -9,59 +9,48 @@
       "id": "2",
       "email": "user2@username.com",
       "password": "user2"
+    }
+  ],
+  "viewers": [
+    {
+        "id": "1",
+        "date": "Sep 27",
+        "value": "200"
     },
     {
-      "id": "2e4a",
-      "companyName": "",
-      "companyEmail": "",
-      "adminUsername": "",
-      "phoneNumber": "",
-      "password": "",
-      "confirmPassword": "",
-      "companySize": "",
-      "currency": "",
-      "certOfRegistration": "",
-      "companyByLaws": "",
-      "companyLogo": "",
-      "companyThemeColor": ""
+        "id": "2",
+        "date": "Sep 28",
+        "value": "300"
     },
     {
-      "id": "db9c",
-      "companyName": "",
-      "companyEmail": "",
-      "adminUsername": "",
-      "phoneNumber": "",
-      "password": "",
-      "confirmPassword": "",
-      "companySize": "",
-      "currency": "",
-      "certOfRegistration": "",
-      "companyByLaws": "",
-      "companyLogo": "",
-      "companyThemeColor": ""
+        "id": "3",
+        "date": "Sep 29",
+        "value": "400"
     },
     {
-      "id": "016b",
-      "closed": false,
-      "currentObservers": null,
-      "observers": [],
-      "isStopped": false,
-      "hasError": false,
-      "thrownError": null,
-      "_value": {
-        "companyName": "",
-        "companyEmail": "",
-        "adminUsername": "",
-        "phoneNumber": "",
-        "password": "",
-        "confirmPassword": "",
-        "companySize": "",
-        "currency": "",
-        "certOfRegistration": "",
-        "companyByLaws": "",
-        "companyLogo": "",
-        "companyThemeColor": ""
-      }
+        "id": "4",
+        "date": "Sep 30",
+        "value": "500"
+    },
+    {
+        "id": "5",
+        "date": "Oct 1",
+        "value": "600"
+    },
+    {
+        "id": "6",
+        "date": "Oct 2",
+        "value": "700"
+    },
+    {
+        "id": "7",
+        "date": "Oct 3",
+        "value": "800"
+    },
+    {
+        "id": "8",
+        "date": "Oct 4",
+        "value": "900"
     }
   ]
 }

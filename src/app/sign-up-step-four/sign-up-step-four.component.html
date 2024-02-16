@@ -22,8 +22,7 @@
                     <label for="certificate-upload" class="upload-label">Company Logo</label>
                     <div class="upload-area-container">
                         <div class="upload-area">
-                            <input type="file" id="certificate-upload" class="upload-input">
-                            <!-- <i class="upload-icon">&#x21E7;</i> -->
+                            <input type="file" id="certificate-upload" class="upload-input" [(ngModel)]="companyLogo">
                             <img src="../../assets/Combined shape 10534.png" alt="upload icon" class="upload-icon">
                             <p>Drop files here or click to upload</p>
                         </div>
@@ -31,12 +30,12 @@
                 </div>
                 <label for="company-color" class="upload-label">Company Theme Color</label>
                 <div class="color-choice flex gap-2">
-                    <input type="color" name="company-color" id="company-color" class="email-input" value="#1520A6">
-                    <p>#1520A6</p>
+                    <input type="color" name="company-color" id="company-color" class="email-input" value="#1520A6" [(ngModel)]="companyThemeColor">
+                    <p>{{companyThemeColor}}</p>
                 </div>
                 <hr>
             </div>
-            <button type="submit" style="margin-top: 30px;">Complete Sign Up</button>
+            <button type="submit" (click)="completeSignUp()" style="margin-top: 30px;">Complete Sign Up</button>
             <p class="already-account">Already have an account? <a [routerLink]="['/login']">Sign In</a></p>
         </div>
     </div>

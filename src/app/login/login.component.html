@@ -14,16 +14,16 @@
             <h3 class="sign-in-title">Sign In</h3>
             <img src="../../assets/3071354 1.png" alt="" class="sign-in-image">
             <div class="sign-in-form">
-                <form action="" class="sign-in-form-elements">
+                <form action="" class="sign-in-form-elements" (ngSubmit)="login()">
                     <label for="email" class="email-label">Email</label>
-                    <input type="email" name="email" id="email" class="email-input" placeholder="samuelmuli95@gmail.com">
+                    <input type="email" name="email" id="email" class="email-input" placeholder="samuelmuli95@gmail.com" [(ngModel)]="email">
                     <hr>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="********">
+                    <input type="password" name="password" id="password" placeholder="********" [(ngModel)]="password">
                     <hr>
                 </form>
                 <a href="#" class="forgot-password">Forgot Password?</a>
-                <button type="submit">Sign In</button>
+                <button type="submit" (click)="login()">Sign In</button>
                 <p>Don't have an account? <a href="#" [routerLink]="['/sign-up-one']">Create an account</a></p>
             </div>
         </div>

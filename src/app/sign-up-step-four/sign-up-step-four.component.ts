@@ -23,10 +23,16 @@ export class SignUpStepFourComponent {
 
   constructor(private router: Router, private signUpService: SignUpServiceService){}
 
+  
+
   completeSignUp(){
     if(this.companyLogo === '' || this.companyThemeColor === ''){
       alert('Please fill all fields');
     }else{
+      this.signUpService.updateData({
+        companyLogo: this.companyLogo,
+        companyThemeColor: this.companyThemeColor
+      })
       this.signUpService.submitData().subscribe({
         next: (response) => {
           console.log('Sign Up successful',response);

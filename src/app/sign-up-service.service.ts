@@ -27,9 +27,14 @@ export class SignUpServiceService {
   updateData(data: Partial<SignUpData>) {
     console.log('Sign Up Data',data);
     this.signUpdata = { ...this.signUpdata, ...data };
+    console.log('Sign Up Data',this.signUpdata);
   }
 
   submitData(): Observable<any> {
+    // Call update data to update the sign up data in the service
+    this.updateData({
+      
+    })
     console.log('Sign Up Data',this.signUpdata);
     return this.http.post('http://localhost:3000/users', this.signUpdata);
   }

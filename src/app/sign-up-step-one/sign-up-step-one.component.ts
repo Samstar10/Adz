@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { SignUpServiceService } from '../sign-up-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up-step-one',
   standalone: true,
   imports: [
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [SignUpServiceService],
   templateUrl: './sign-up-step-one.component.html',
@@ -37,6 +39,7 @@ export class SignUpStepOneComponent {
         phoneNumber: this.phoneNumber,
         password: this.password
       })
+      console.log('This step completed successfully');
       this.router.navigate(['/sign-up-two']);
     }
   }

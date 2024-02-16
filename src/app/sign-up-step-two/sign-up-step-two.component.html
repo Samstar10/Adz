@@ -21,7 +21,7 @@
                 <form action="" class="sign-in-form-elements">
                     <label for="email" class="email-label">Company Size</label>
                     <!-- <input type="email" name="email" id="email" class="email-input" placeholder="samuelmuli95@gmail.com"> -->
-                    <select name="company-size" id="" required>
+                    <select name="company-size" id="" required [(ngModel)]="companySize">
                         <option value="" disabled selected>50-100</option>
                         <option value="small">0 - 50</option>
                         <option value="medium">50 - 100</option>
@@ -29,7 +29,7 @@
                     </select>
                     <hr>
                     <label for="password">Currency</label>
-                    <select name="currency" id="" required>
+                    <select name="currency" id="" required [(ngModel)]="currency">
                         <option value="" disabled selected>KES</option>
                         <option value="small">KES</option>
                         <option value="medium">USD</option>

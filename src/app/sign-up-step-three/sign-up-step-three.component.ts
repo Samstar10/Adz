@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { SignUpServiceService } from '../sign-up-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up-step-three',
   standalone: true,
   imports: [
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [SignUpServiceService],
   templateUrl: './sign-up-step-three.component.html',
@@ -16,9 +18,21 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class SignUpStepThreeComponent {
 
+  certOfRegistration: string = '';
+  companyByLaws: string = '';
+
   constructor(private router: Router, private signUpService: SignUpServiceService){}
 
   redirectTo(){
-    this.router.navigate(['/sign-up-four']);
+    if(this.certOfRegistration === '' || this.companyByLaws === ''){
+      alert('Please fill all fields');
+    }else{
+      this.signUpService.updateData({
+        certOfRegistration: this.certOfRegistration,
+        companyByLaws: this.companyByLaws
+      })
+      console.log('This step completed successfully');
+      this.router.navigate(['/sign-up-four']);
+    }
   }
 }

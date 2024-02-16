@@ -22,7 +22,7 @@
                     <label for="certificate-upload" class="upload-label">Certificate of Registration</label>
                     <div class="upload-area-container">
                         <div class="upload-area">
-                            <input type="file" id="certificate-upload" class="upload-input">
+                            <input type="file" id="certificate-upload" class="upload-input" [(ngModel)]="certOfRegistration">
                             <!-- <i class="upload-icon">&#x21E7;</i> -->
                             <img src="../../assets/Combined shape 10534.png" alt="upload icon" class="upload-icon">
                             <p>Drop files here or click to upload</p>
@@ -32,7 +32,7 @@
                 <div class="file-upload">
                     <label for="bylaws-upload" class="upload-label">Company By-Laws</label>
                     <div class="upload-area-container">
-                        <input type="file" id="bylaws-upload" class="upload-input">
+                        <input type="file" id="bylaws-upload" class="upload-input" [(ngModel)]="companyByLaws">
                         <div class="upload-area">
                             <!-- <i class="upload-icon">&#x21E7;</i> -->
                             <img src="../../assets/Combined shape 10534.png" alt="upload icon" class="upload-icon">

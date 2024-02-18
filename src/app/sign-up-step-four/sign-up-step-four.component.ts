@@ -36,6 +36,7 @@ export class SignUpStepFourComponent {
       this.signUpService.submitData().subscribe({
         next: (response) => {
           console.log('Sign Up successful',response);
+          this.signUpService.clearStoredData();
           this.router.navigate(['/login']);
         },
         error: (error) => {

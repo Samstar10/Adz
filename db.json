@@ -11,34 +11,18 @@
       "password": "user2"
     },
     {
-      "id": "d080",
-      "companyName": "",
-      "companyEmail": "",
-      "adminUsername": "",
-      "phoneNumber": "",
-      "password": "",
-      "confirmPassword": "",
-      "companySize": "",
-      "currency": "",
-      "certOfRegistration": "",
-      "companyByLaws": "",
-      "companyLogo": "",
-      "companyThemeColor": ""
-    },
-    {
-      "id": "777c",
-      "companyName": "",
-      "companyEmail": "",
-      "adminUsername": "",
-      "phoneNumber": "",
-      "password": "",
-      "confirmPassword": "",
-      "companySize": "",
-      "currency": "",
-      "certOfRegistration": "",
-      "companyByLaws": "",
-      "companyLogo": "C:\\fakepath\\Screenshot 2024-02-16 at 14.03.17.png",
-      "companyThemeColor": "#a03131"
+      "id": "5060",
+      "companyName": "LeoLimited",
+      "companyEmail": "leo@leoltd",
+      "adminUsername": "leos",
+      "phoneNumber": "0741123033",
+      "password": "12345",
+      "companySize": "0-50",
+      "currency": "KES",
+      "certOfRegistration": "C:\\fakepath\\Screenshot 2024-02-14 at 12.34.22.png",
+      "companyByLaws": "C:\\fakepath\\Screenshot 2024-02-16 at 14.02.34.png",
+      "companyLogo": "C:\\fakepath\\Screenshot 2024-02-18 at 19.44.25.png",
+      "companyThemeColor": "#6d1212"
     }
   ],
   "viewers": [

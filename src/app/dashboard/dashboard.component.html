@@ -122,17 +122,16 @@
                     <img src="../../assets/Rectangle 809.png" alt="viewers representation">
                     <p>Viewers</p>
                 </div>
-                <!-- <div class="flex justify-center items-center pl-5 pr-5 h-60">
-                    <div class="w-full">
-                        <canvas #chartCanvas baseChart
-                            [type]="chartType"
-                            [data]="chartData"
-                            [options]="chartOptions">
+                <div class="flex justify-center items-center pl-5 pr-5 h-60">
+                    <div class="w-full flex justify-center items-center">
+                        <canvas #chartCanvas baseChart width="800px" height="240px"
+                            [type]="'line'"
+                            [data]="lineChartData"
+                            [options]="lineChartOptions"
+                            [legend]="lineChartLegend"
+                        >
                         </canvas>
                     </div>
-                </div> -->
-                <div class="h-60">
-                    <img src="" alt="">
                 </div>
                 <div class="flex h-6 ml-5 mt-5">
                     <p>Last 7 Days</p>

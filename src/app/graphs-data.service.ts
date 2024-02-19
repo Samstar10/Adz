@@ -10,6 +10,13 @@ export interface Campaign {
   impressions: number;
 }
 
+export interface Locations {
+  id: number;
+  image: string;
+  location: string;
+  impressions: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -44,6 +51,21 @@ export class GraphsDataService {
       { id: 7, title: 'Volkswagen: Think Small (1960)', adSpend: 1906, conversions: 1112, impressions: 111185 },
       { id: 8, title: 'Google: Year in Search (2017)', adSpend: 1906, conversions: 223, impressions: 22296 },
       { id: 9, title: 'Dos Equis: The Most Interesting Man in the World (2006)', adSpend: 1906, conversions: 8, impressions: 74 }
+    ]
+  }
+
+  getLocationsData(): Locations[]{
+    return[
+      { id: 1, image: '../../assets/South Africa.png', location: 'South Africa', impressions: 422 },
+      { id: 2, image: '../../assets/New Zealand.png', location: 'New Zealand', impressions: 578 },
+      { id: 3, image: '../../assets/Kenya.png', location: 'Kenya', impressions: 4376 },
+      { id: 4, image: '../../assets/Australia.png', location: 'Australia', impressions: 10925 },
+      { id: 5, image: '../../assets/United Kingdom.png', location: 'United Kingdom', impressions: 15837 },
+      { id: 6, image: '../../assets/Canada.png', location: 'Canada', impressions: 20796 },
+      { id: 7, image: '../../assets/United States.png', location: 'United States of America', impressions: 111185 },
+      { id: 8, image: '../../assets/Russia.png', location: 'Russian Federation', impressions: 22296 },
+      { id: 9, image: '../../assets/France.png', location: 'France', impressions: 74 },
+      { id: 10, image: '../../assets/Ireland.png', location: 'Ireland', impressions: 74 }
     ]
   }
 }

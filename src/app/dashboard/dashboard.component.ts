@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgChartsModule } from 'ng2-charts';
-import { GraphsDataService, Campaign } from '../graphs-data.service';
+import { GraphsDataService, Campaign, Locations } from '../graphs-data.service';
 import { ChartConfiguration, ChartType, ChartOptions, Chart, registerables } from 'chart.js';
 import { map } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
@@ -33,6 +33,7 @@ type SummaryEntry = {
 })
 export class DashboardComponent {
   campaigns: Campaign[] = [];
+  locations: Locations[] = [];
   summaryData: { onlineUsers: number, entries: SummaryEntry[] } = { onlineUsers: 0, entries: [] };
   @ViewChild('chartCanvas') chartCanvas!: ElementRef;
 
@@ -136,6 +137,8 @@ export class DashboardComponent {
     })
 
     this.campaigns = this.graphsDataService.getCampaignData();
+
+    this.locations = this.graphsDataService.getLocationsData();
   }
 
   private formatTimeLabel(time: string): string {

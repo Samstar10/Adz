@@ -243,7 +243,30 @@
                 </div>
             </div>
             <div class="w-[360px] h-[406px] border-2 border-[#DFDFDF] rounded-3xl bg-[#F3F3F3]">
-                <p>Table goes here</p>
+                <div class="flex justify-between items-center m-5">
+                    <p class="w-[74px] h-6 font-semibold text-[1rem] text-[#1C1B1F]">Summary</p>
+                    <img src="../../assets/cached.png" alt="reset icon">
+                </div>
+                <div>
+                    <table class="divide-y mt-5 min-w-max w-full table-auto mr-5 ml-5">
+                        <thead>
+                            <tr>
+                                <th class="h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">Location</th>
+                                <th class="h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">Impressions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let location of locations; let i = index">
+                                <td class="py-[4px] h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">{{i + 1}} {{location.location}}</td>
+                                <td class="h-[18px] font-bold text-[0.75rem] text-[#1520A6]">{{location.impressions}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="flex h-6 ml-5 mt-5">
+                    <p>Last 7 Days</p>
+                    <img src="../../assets/arrow_drop_down.png" alt="">
+                </div>
             </div>
         </div>
         <div class="flex mt-10 ml-40 gap-10">

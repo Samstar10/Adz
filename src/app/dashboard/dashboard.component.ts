@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgChartsModule } from 'ng2-charts';
-import { GraphsDataService } from '../graphs-data.service';
+import { GraphsDataService, Campaign } from '../graphs-data.service';
 import { ChartConfiguration, ChartType, ChartOptions, Chart, registerables } from 'chart.js';
 import { map } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
@@ -32,6 +32,7 @@ type SummaryEntry = {
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  campaigns: Campaign[] = [];
   summaryData: { onlineUsers: number, entries: SummaryEntry[] } = { onlineUsers: 0, entries: [] };
   @ViewChild('chartCanvas') chartCanvas!: ElementRef;
 
@@ -78,6 +79,43 @@ export class DashboardComponent {
   };
   public lineChartLegend = false;
 
+  public doughnutChartLabels: string[] = [
+    'Male',
+    'Female',
+    'Other'
+  ];
+
+  public doughnutChartDatasets: ChartConfiguration<'doughnut'>['data']['datasets'] = [
+    {
+      data: [150, 100, 50],
+      backgroundColor: [
+        '#1520A6',
+        '#FD6A02',
+        '#30A245'
+      ],
+      hoverBackgroundColor: [
+        '#1520A6',
+        '#FD6A02',
+        '#30A245'
+      ]
+    }
+  ]
+
+  public doughnutChartOptions: ChartConfiguration<'doughnut'>['options'] = {
+    responsive: false,
+    cutout: '50%',
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+        labels: {
+          usePointStyle: true,
+          pointStyle: 'circle',
+        }
+      }
+    }
+  }
+
   ngAfterViewInit(): void {
     const chartContext = this.chartCanvas.nativeElement.getContext('2d');
     const gradient = chartContext.createLinearGradient(0, 0, 0, this.chartCanvas.nativeElement.offsetHeight);
@@ -96,6 +134,8 @@ export class DashboardComponent {
         impressions: rawData[key].impressions
       }
     })
+
+    this.campaigns = this.graphsDataService.getCampaignData();
   }
 
   private formatTimeLabel(time: string): string {

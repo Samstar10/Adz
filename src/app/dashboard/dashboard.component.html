@@ -176,14 +176,71 @@
                     <p class="h-6 font-semibold text-[1rem] text-[#1C1B1F]">Campaign Performance</p>
                     <img src="../../assets/cached.png" alt="cached icon" class="w-6 h-6">
                 </div>
+                <div class="h-60">
+                    <table class="divide-y mt-5 min-w-max w-full table-auto mr-5 ml-5">
+                        <thead>
+                            <tr>
+                                <th class="h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">Title</th>
+                                <th class="h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">Ad Spend</th>
+                                <th class="h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">Conversions</th>
+                                <th class="h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">Impressions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let campaign of campaigns; let i = index">
+                                <td class="py-[4px] h-[18px] font-normal text-[0.75rem] text-[#1C1B1F]">{{i + 1}}. {{campaign.title}}</td>
+                                <td class="h-[18px] font-bold text-[0.75rem] text-[#1520A6]"><span class="text-[0.5rem]">ZAR</span> {{ campaign.adSpend | number:'1.2-2' }}</td>
+                                <td class="h-[18px] font-bold text-[0.75rem] text-[#1520A6]">{{campaign.conversions}}</td>
+                                <td class="h-[18px] font-bold text-[0.75rem] text-[#1520A6]">{{campaign.impressions}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="flex h-6 ml-5 mt-12">
+                    <p>Last 7 Days</p>
+                    <img src="../../assets/arrow_drop_down.png" alt="">
+                </div>
             </div>
             <div class="w-[360px] h-[406px] border-2 border-[#DFDFDF] rounded-3xl bg-[#F3F3F3]">
-                <p>Table goes here</p>
+                <div class="flex justify-between items-center m-5">
+                    <p class="h-6 font-semibold text-[1rem] text-[#1C1B1F]">Gender Distribution</p>
+                    <img src="../../assets/cached.png" alt="reset icon">
+                </div>
+                <div class="flex justify-center items-center mb-12">
+                    <canvas baseChart width="250px" height="250px"
+                    [labels]="doughnutChartLabels"
+                    [datasets]="doughnutChartDatasets"
+                    [options]="doughnutChartOptions"
+                    [legend]="true"
+                    [type]="'doughnut'"
+                    >
+                    </canvas>
+                </div>
+                <div class="flex h-6 ml-5">
+                    <p>Last 7 Days</p>
+                    <img src="../../assets/arrow_drop_down.png" alt="">
+                </div>
             </div>
         </div>
         <div class="flex mt-10 ml-40 gap-10">
             <div class="w-[840px] h-[406px] bg-[#F3F3F3] border-[#DFDFDF] border-2 rounded-3xl">
-                <p>Graph goes here</p>
+                <div class="flex justify-between items-center m-5">
+                    <p class="h-6 font-semibold text-[1rem] text-[#1C1B1F]">Impressions Map</p>
+                    <img src="../../assets/cached.png" alt="cached icon" class="w-6 h-6">
+                </div>
+                <div class="flex justify-between items-start gap-6 ml-5 mr-[68px]">
+                    <div class="flex flex-col gap-[10px] items-start">
+                        <img src="../../assets/Add Product.png" alt="">
+                        <img src="../../assets/Subtract Product.png" alt="">
+                    </div>
+                    <div class="h-[250px] w-[704px] flex">
+                        <img src="../../assets/World Map.png" alt="World map" class="h-[302px]">
+                    </div>
+                </div>
+                <div class="flex h-6 ml-5 mt-12">
+                    <p>Last 7 Days</p>
+                    <img src="../../assets/arrow_drop_down.png" alt="">
+                </div>
             </div>
             <div class="w-[360px] h-[406px] border-2 border-[#DFDFDF] rounded-3xl bg-[#F3F3F3]">
                 <p>Table goes here</p>

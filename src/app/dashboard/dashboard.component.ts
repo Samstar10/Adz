@@ -42,7 +42,7 @@ export class DashboardComponent {
         fill: true,
         tension: 0.4,
         borderColor: '#FD6A02',
-        backgroundColor: 'rgba(253,106,2,0.5)'
+        // backgroundColor: 'rgba(253,106,2,0.5)'
       }
     ]
   };
@@ -71,8 +71,6 @@ export class DashboardComponent {
     gradient.addColorStop(0, 'rgba(253,106,2,1)');
     gradient.addColorStop(1, 'rgba(253,106,2,0.2)');
     this.lineChartData.datasets[0].backgroundColor = gradient;
-
-    this.chartCanvas.nativeElement.update()
   }
 
 }

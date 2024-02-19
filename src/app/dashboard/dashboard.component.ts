@@ -4,8 +4,19 @@ import { GraphsDataService } from '../graphs-data.service';
 import { ChartConfiguration, ChartType, ChartOptions, Chart, registerables } from 'chart.js';
 import { map } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
-Chart.register(...registerables);
+// Chart.register(...registerables);
+
+type SummaryDataType = {
+  [key: string]: { users: number; impressions: number };
+}
+
+type SummaryEntry = {
+  time: string;
+  users: number;
+  impressions: number;
+}
 
 @Component({
   selector: 'app-dashboard',
@@ -13,13 +24,15 @@ Chart.register(...registerables);
   imports: [
     NgChartsModule,
     HttpClientModule,
-    // BaseChartDirective
+    // BaseChartDirective,
+    CommonModule
   ],
   providers: [GraphsDataService],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  summaryData: { onlineUsers: number, entries: SummaryEntry[] } = { onlineUsers: 0, entries: [] };
   @ViewChild('chartCanvas') chartCanvas!: ElementRef;
 
   constructor(private graphsDataService: GraphsDataService){}
@@ -71,6 +84,34 @@ export class DashboardComponent {
     gradient.addColorStop(0, 'rgba(253,106,2,1)');
     gradient.addColorStop(1, 'rgba(253,106,2,0.2)');
     this.lineChartData.datasets[0].backgroundColor = gradient;
+  }
+
+  ngOnInit(): void {
+    let rawData: SummaryDataType = this.graphsDataService.getSummaryData();
+
+    this.summaryData.entries = Object.keys(rawData).map(key => {
+      return {
+        time: this.formatTimeLabel(key),
+        users: rawData[key].users,
+        impressions: rawData[key].impressions
+      }
+    })
+  }
+
+  private formatTimeLabel(time: string): string {
+    const timeLabels: { [key: string]: string } = {
+      today: 'Today',
+      yesterday: 'Yesterday',
+      lastWeek: 'Last Week',
+      last7Days: 'Last 7 Days',
+      last30Days: 'Last 30 Days',
+      thisYear: 'This Year (Jan - Today)',
+      lastYear: 'Last Year'
+    };
+
+    const formattedTime = time.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+
+    return timeLabels[time] || formattedTime;
   }
 
 }

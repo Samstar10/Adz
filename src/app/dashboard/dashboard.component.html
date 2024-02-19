@@ -147,9 +147,24 @@
                     <p class="w-[119px] h-6 font-semibold text-[1rem] text-[#30A245]">Online Users: 0</p>
                 </div>
                 <div class="h-60">
-                    <img src="" alt="">
+                    <table class="divide-y mt-5 min-w-full mr-5 ml-5">
+                        <thead>
+                            <tr>
+                                <th class="h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">Time</th>
+                                <th class="h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">Users</th>
+                                <th class="h-[18px] font-normal text-[0.75rem] text-[#1C1B1F] text-left tracking-wider">Impressions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let entry of summaryData.entries">
+                                <td class="py-[4px] h-[18px] font-normal text-[0.75rem] text-[#1C1B1F]">{{entry.time}}</td>
+                                <td class="h-[18px] font-bold text-[0.75rem] text-[#1520A6]">{{entry.users}}</td>
+                                <td class="h-[18px] font-bold text-[0.75rem] text-[#1520A6]">{{entry.impressions}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="flex h-6 ml-5">
+                <div class="flex h-6 mb-5 ml-5 mt-[-10px]">
                     <p>Last 7 Days</p>
                     <img src="../../assets/arrow_drop_down.png" alt="">
                 </div>
@@ -157,7 +172,10 @@
         </div>
         <div class="flex mt-10 ml-40 gap-10">
             <div class="w-[840px] h-[406px] bg-[#F3F3F3] border-[#DFDFDF] border-2 rounded-3xl">
-                <p>Graph goes here</p>
+                <div class="flex justify-between items-center m-5">
+                    <p class="h-6 font-semibold text-[1rem] text-[#1C1B1F]">Campaign Performance</p>
+                    <img src="../../assets/cached.png" alt="cached icon" class="w-6 h-6">
+                </div>
             </div>
             <div class="w-[360px] h-[406px] border-2 border-[#DFDFDF] rounded-3xl bg-[#F3F3F3]">
                 <p>Table goes here</p>

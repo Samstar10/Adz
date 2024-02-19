@@ -271,11 +271,56 @@
         </div>
         <div class="flex mt-10 ml-40 gap-10">
             <div class="w-[840px] h-[406px] bg-[#F3F3F3] border-[#DFDFDF] border-2 rounded-3xl">
-                <p>Graph goes here</p>
+                <div class="flex justify-between items-center m-5">
+                    <p class="h-6 font-semibold text-[1rem] text-[#1C1B1F]">Top Device Models</p>
+                    <img src="../../assets/cached.png" alt="cached icon" class="w-6 h-6">
+                </div>
+                <div class="flex justify-between items-center m-5">
+                    <canvas baseChart width="708px" height="250px"
+                    [data]="horizontalBarChartData"
+                    [options]="horizontalBarChartOptions"
+                    [type]="'bar'"
+                    >
+                    </canvas>
+                </div>
+                <div class="flex h-6 ml-5">
+                    <p>Last 7 Days</p>
+                    <img src="../../assets/arrow_drop_down.png" alt="">
+                </div>
             </div>
             <div class="w-[360px] h-[406px] border-2 border-[#DFDFDF] rounded-3xl bg-[#F3F3F3]">
-                <p>Table goes here</p>
+                <div class="flex justify-between items-center m-5">
+                    <p class="h-6 font-semibold text-[1rem] text-[#1C1B1F]">Gender Distribution</p>
+                    <img src="../../assets/cached.png" alt="reset icon">
+                </div>
+                <div class="flex justify-center items-center mb-12">
+                    <canvas baseChart width="250px" height="250px"
+                    [labels]="secondDoughnutChartLabels"
+                    [datasets]="secondDoughnutChartDatasets"
+                    [options]="secondDoughnutChartOptions"
+                    [legend]="true"
+                    [type]="'doughnut'"
+                    >
+                    </canvas>
+                </div>
+                <div class="flex h-6 ml-5">
+                    <p>Last 7 Days</p>
+                    <img src="../../assets/arrow_drop_down.png" alt="">
+                </div>
             </div>
         </div>
+        <footer>
+            <div class="w-[1560px] h-[50px] bg-[#F1F5F7] mt-20 pr-40 pl-40 flex justify-between items-center">
+                <div>
+                    <p>&copy; 2023 RewardAdz. All Rights Reserved.</p>
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </footer>
     </div>
 </div>

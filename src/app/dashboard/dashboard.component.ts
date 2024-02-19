@@ -5,8 +5,10 @@ import { ChartConfiguration, ChartType, ChartOptions, Chart, registerables } fro
 import { map } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import  ChartDataLabels  from 'chartjs-plugin-datalabels'
 
 // Chart.register(...registerables);
+Chart.register(ChartDataLabels, ...registerables)
 
 type SummaryDataType = {
   [key: string]: { users: number; impressions: number };
@@ -113,6 +115,101 @@ export class DashboardComponent {
           usePointStyle: true,
           pointStyle: 'circle',
         }
+      },
+      datalabels: {
+        display: false
+      }
+    }
+  }
+
+  public horizontalBarChartData: ChartConfiguration<'bar'>['data'] = {
+    labels: ['Samsung', 'Oppo', 'Nokia', 'Tecno', 'Infinix', 'HTC'],
+    datasets: [
+      {
+        data: [51.4, 26.7, 7.2, 35.1, 11.5, 26.7],
+        backgroundColor: [
+          '#1520A6', '#FD6A02', '#30A245', '#CC142B', '#7F3E3B', '#7F63F4'
+        ],
+        borderRadius: 10
+      }
+    ]
+  };
+
+  public horizontalBarChartOptions: ChartConfiguration<'bar'>['options'] = {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltip: {
+        enabled: true
+      },
+      datalabels: {
+        anchor: 'center',
+        align: 'center',
+        color: '#FCFCFC',
+        font: {
+          weight: 700
+        },
+        formatter: (value: number) => {
+          return `${value}%`;
+        }
+      }
+    },
+    scales: {
+      x: {
+        beginAtZero: true,
+        ticks: {
+          display: false
+        },
+      },
+      y: {
+        grid: {
+          display: false
+        }
+      }
+    }
+  };
+
+  public barChartPlugins = [ChartDataLabels];
+
+  public secondDoughnutChartLabels: string[] = [
+    '18 - 24',
+    '35+',
+    '25-34'
+  ];
+
+  public secondDoughnutChartDatasets: ChartConfiguration<'doughnut'>['data']['datasets'] = [
+    {
+      data: [280, 90, 30],
+      backgroundColor: [
+        '#1520A6',
+        '#FD6A02',
+        '#30A245'
+      ],
+      hoverBackgroundColor: [
+        '#1520A6',
+        '#FD6A02',
+        '#30A245'
+      ]
+    }
+  ]
+
+  public secondDoughnutChartOptions: ChartConfiguration<'doughnut'>['options'] = {
+    responsive: false,
+    cutout: '50%',
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+        labels: {
+          usePointStyle: true,
+          pointStyle: 'circle',
+        }
+      },
+      datalabels: {
+        display: false
       }
     }
   }

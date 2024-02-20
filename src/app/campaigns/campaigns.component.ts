@@ -17,7 +17,7 @@ export class CampaignsComponent {
   constructor(private router: Router){}
 
   redirectTo(){
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/campaigns-2']);
   }
 
 }

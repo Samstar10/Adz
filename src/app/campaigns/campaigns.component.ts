@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-campaigns',
@@ -13,5 +13,11 @@ import { RouterModule } from '@angular/router';
 export class CampaignsComponent {
 
   currentYear: number = new Date().getFullYear();
+
+  constructor(private router: Router){}
+
+  redirectTo(){
+    this.router.navigate(['/dashboard']);
+  }
 
 }

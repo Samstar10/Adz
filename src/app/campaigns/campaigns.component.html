@@ -5,19 +5,19 @@
         </div>
         <div class="h-[2px] bg-[#FCFCFC] my-4">
         </div>
-        <a href="" class="flex items-center gap-4 p-4 bg-[#FCFCFC] text-[#1520A6]">
-            <img src="../../assets/home.png" alt="home icon" class="w-6 h-6">
+        <a [routerLink]="['/dashboard']" class="flex items-center gap-4 p-4 text-[#FCFCFC]  hover:opacity-70">
+            <img src="../../assets/home (1).png" alt="home icon" class="w-6 h-6">
             <p class="font-medium text-xl md:text-base">Dashboard</p>
         </a>
-        <a href="" class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70">
-            <img src="../../assets/campaign.png" alt="campaign icon" class="w-6 h-6">
+        <a class="flex items-center gap-4 p-4 bg-[#FCFCFC] text-[#1520A6]">
+            <img src="../../assets/campaign (1).png" alt="campaign icon" class="w-6 h-6">
             <p class="font-medium text-xl md:text-base">Campaigns</p>
         </a>
-        <a href="" class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70">
+        <a class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70">
             <img src="../../assets/receipt_long.png" alt="receipt icon" class="w-6 h-6">
             <p class="font-medium text-xl md:text-base">Transactions</p>
         </a>
-        <a href="" class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70">
+        <a class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70">
             <img src="../../assets/diversity_2.png" alt="Network icon" class="w-6 h-6">
             <p class="font-medium text-xl md:text-base">Advertiser Network</p>
         </a>
@@ -57,7 +57,14 @@
                 <img src="../../assets/settings (1).png" alt="settings icon" class="w-9 h-9">
             </div>
         </header>
-        
+        <div class="md:m-16">
+            <div>
+                <h2 class="font-semibold text-4xl text-[#1C1B1F]">Campaigns</h2>
+                <div>
+                    <p>Home  >  <span>Campaigns</span></p>
+                </div>
+            </div>
+        </div>
         <footer>
             <div class="w-full h-[50px] bg-[#F1F5F7] mt-20 pr-40 md:pr-20 pl-40 md:pl-20 flex justify-between items-center">
                 <div class="h-[21px]">

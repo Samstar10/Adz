@@ -6,6 +6,7 @@ import { map } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import  ChartDataLabels  from 'chartjs-plugin-datalabels'
+import { RouterModule } from '@angular/router';
 
 // Chart.register(...registerables);
 Chart.register(ChartDataLabels, ...registerables)
@@ -26,8 +27,8 @@ type SummaryEntry = {
   imports: [
     NgChartsModule,
     HttpClientModule,
-    // BaseChartDirective,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   providers: [GraphsDataService],
   templateUrl: './dashboard.component.html',

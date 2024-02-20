@@ -36,6 +36,7 @@ type SummaryEntry = {
 export class DashboardComponent {
   campaigns: Campaign[] = [];
   locations: Locations[] = [];
+  currentYear: number = new Date().getFullYear();
   summaryData: { onlineUsers: number, entries: SummaryEntry[] } = { onlineUsers: 0, entries: [] };
   @ViewChild('chartCanvas') chartCanvas!: ElementRef;
 
@@ -76,6 +77,9 @@ export class DashboardComponent {
     },
     plugins: {
       legend: {
+        display: false
+      },
+      datalabels: {
         display: false
       }
     }

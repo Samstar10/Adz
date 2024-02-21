@@ -384,3 +384,468 @@ hr {
         font-size: 0.875rem;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .description-container,
+    .sign-in-container {
+      width: 100%;
+      margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1650px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        gap: 150px;
+    }
+
+    .description-container{
+        width: 100%;
+    }
+
+    .description-text-container{
+        width: 90%;
+        /* margin-left: 50px; */
+    }
+
+    .description-title{
+        font-size: calc(2rem - 0.2rem);
+    }
+
+    .description-description, .description-text-1, .description-text-2{
+        font-size: calc(1rem - 0.2rem);
+    }
+
+    .description-text-2{
+        margin-top: 10px;
+    }
+
+    .logo{
+        width: 200px;
+        height: 30px;
+    }
+
+    .description-title{
+        font-size: 1rem;
+        margin-top: 40px;
+    }
+
+    .description-description{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .sign-in-form-container {
+        width: 400px;
+        height: 600px;
+    }
+    .sign-in-title {
+        font-size: calc(2rem - 0.2rem);
+    }
+
+    .sign-in-image {
+        width: 200px;
+        height: 200px;
+    }
+    .sign-in-form{
+        height: 300px;
+    }
+    .email-label, 
+    label[for="password"], 
+    label[for="confirm-password"],
+    label[for="company-email"],
+    label[for="admin-username"],
+    label[for="phone-number"],
+    label[for="password-confirmation"] {
+        font-size: 0.75rem;
+        margin-top: 3px;
+    }
+
+    .email-input, 
+    input[type="password"],
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"]  {
+        font-size: 0.75rem;
+        /* padding: 7.5px; */
+        margin-bottom: 2px;
+        margin-top: 1px;
+        height: 20px;
+    }
+    hr{
+        margin-bottom: 2px;
+    }
+
+    button[type="button"] {
+        font-size: 0.75rem;
+        padding: 8px 12.5px;
+        font-size: 0.75rem;
+        margin-bottom: 5px;
+        height: 30px;
+    }
+    .sign-in-form{
+        height: 270px;
+    }
+    .sign-in-form a {
+        margin-bottom: 5px;
+        font-size: 0.75rem;
+        margin-top: 5px;
+    }
+    .sign-in-form p {
+        font-size: 0.75rem;
+    }
+    .sign-in-form p a {
+        font-size: 0.75rem;
+    }
+    .sign-in-container{
+        padding: 15px;
+        width: 100%;
+    }
+    .terms-conditions{
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .description-container{
+        display: none;
+    }
+    .sign-in-container {
+      width: 100%;
+      max-height: 100vh;
+      /* padding: 20px; */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      white-space: nowrap;
+    }
+    .sign-in-form-container{
+        width: 100%;
+        max-height: 100%;
+        padding: 20px;
+    }
+    .sign-in-image{
+        width: 200px;
+        height: 200px;
+    }
+    .sign-in-form-container {
+        width: 400px;
+        height: 600px;
+    }
+    .sign-in-title {
+        font-size: calc(2rem - 0.2rem);
+    }
+
+    .sign-in-image {
+        width: 200px;
+        height: 200px;
+    }
+    .sign-in-form{
+        height: 300px;
+    }
+    .email-label, 
+    label[for="password"], 
+    label[for="confirm-password"],
+    label[for="company-email"],
+    label[for="admin-username"],
+    label[for="phone-number"],
+    label[for="password-confirmation"] {
+        font-size: 0.75rem;
+        margin-top: 3px;
+    }
+
+    .email-input, 
+    input[type="password"],
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"]  {
+        font-size: 0.75rem;
+        /* padding: 7.5px; */
+        margin-bottom: 2px;
+        margin-top: 1px;
+        height: 20px;
+    }
+    hr{
+        margin-bottom: 2px;
+    }
+
+    button[type="button"] {
+        font-size: 0.75rem;
+        padding: 8px 12.5px;
+        font-size: 0.75rem;
+        margin-bottom: 5px;
+        height: 30px;
+    }
+    .sign-in-form{
+        height: 270px;
+    }
+    .sign-in-form a {
+        margin-bottom: 5px;
+        font-size: 0.75rem;
+        margin-top: 5px;
+    }
+    .sign-in-form p {
+        font-size: 0.75rem;
+    }
+    .sign-in-form p a {
+        font-size: 0.75rem;
+    }
+    .sign-in-container{
+        padding: 15px;
+        width: 100%;
+    }
+    .terms-conditions{
+        font-size: 0.75rem;
+    }
+    .upload-container{
+        gap: 7.5px;
+        margin-bottom: 0;
+    }
+
+    .file-upload{
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .description-container{
+        display: none;
+    }
+    .sign-in-container{
+        width: 100%;
+        height: 100%;
+        /* padding: 40px; */
+    }
+
+    /* .description-description{
+        font-size: 1rem;
+        margin-top: 10px;
+    } */
+    .sign-in-form-container {
+        width: 400px;
+        height: 700px;
+    }
+
+    .upload-container{
+        gap: 7.5px;
+        margin-bottom: 0;
+    }
+
+    .file-upload{
+        margin-bottom: 50px;
+    }
+
+    .email-input, 
+    input[type="password"],
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"]  {
+        font-size: 0.75rem;
+        /* padding: 7.5px; */
+        margin-bottom: 2px;
+        margin-top: 1px;
+        height: 20px;
+    }
+    hr{
+        margin-bottom: 2px;
+    }
+
+    .sign-in-title {
+        font-size: calc(2rem - 0.2rem);
+    }
+
+    .sign-in-image {
+        width: 200px;
+        height: 200px;
+    }
+    .sign-in-form{
+        height: 300px;
+    }
+    .email-label, label[for="password"] {
+        font-size: 0.75rem;
+        margin-top: 3px;
+    }
+
+    
+    hr{
+        margin-bottom: 12.5px;
+    }
+
+    button[type="submit"] {
+        font-size: 0.75rem;
+        padding: 8px 12.5px;
+        font-size: 0.75rem;
+        margin-bottom: 12.5px;
+        height: 40px;
+    }
+    .sign-in-form a {
+        margin-bottom: 12.5px;
+        font-size: 0.75rem;
+        margin-top: 10px;
+    }
+    .sign-in-form p {
+        font-size: 0.75rem;
+    }
+    .sign-in-form p a {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width:960px){
+    .sign-in-image{
+        height: 250px;
+        width: 250px;
+    }
+
+}
+
+@media (min-width:1300px){
+    .container{
+        gap: 150px;
+    }
+    .sign-in-container{
+        height: 100%;
+    }
+    .sign-in-image{
+        height: 200px;
+        width: 200px;
+    }
+    .sign-in-title{
+        font-size: 1.5rem;
+    } 
+}
+
+@media (max-width:1300px){
+    .container{
+        gap: 80px;
+    }
+    .sign-in-container{
+        height: 100%;
+    }
+    .sign-in-image{
+        height: 200px;
+        width: 200px;
+    }
+    .sign-in-title{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:960px){
+    .container{
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        gap: 150px;
+    }
+
+    .description-container{
+        width: 100%;
+    }
+
+    .description-text-container{
+        width: 90%;
+        /* margin-left: 50px; */
+    }
+
+    .description-title{
+        font-size: calc(2rem - 0.2rem);
+    }
+
+    .description-description, .description-text-1, .description-text-2{
+        font-size: calc(1rem - 0.2rem);
+    }
+
+    .description-text-2{
+        margin-top: 10px;
+    }
+
+    .logo{
+        width: 200px;
+        height: 30px;
+    }
+
+    .description-title{
+        font-size: 1rem;
+        margin-top: 40px;
+    }
+
+    .description-description{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .sign-in-form-container {
+        width: 400px;
+        height: 600px;
+    }
+    .sign-in-title {
+        font-size: calc(2rem - 0.2rem);
+    }
+
+    .sign-in-image {
+        width: 200px;
+        height: 200px;
+    }
+    .sign-in-form{
+        height: 300px;
+    }
+    .email-label, 
+    label[for="password"], 
+    label[for="confirm-password"],
+    label[for="company-email"],
+    label[for="admin-username"],
+    label[for="phone-number"],
+    label[for="password-confirmation"] {
+        font-size: 0.75rem;
+        margin-top: 3px;
+    }
+
+    .email-input, 
+    input[type="password"],
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"]  {
+        font-size: 0.75rem;
+        /* padding: 7.5px; */
+        margin-bottom: 2px;
+        margin-top: 1px;
+        height: 20px;
+    }
+    hr{
+        margin-bottom: 2px;
+    }
+
+    button[type="button"] {
+        font-size: 0.75rem;
+        padding: 8px 12.5px;
+        font-size: 0.75rem;
+        margin-bottom: 5px;
+        height: 30px;
+    }
+    .sign-in-form{
+        height: 270px;
+    }
+    .sign-in-form a {
+        margin-bottom: 5px;
+        font-size: 0.75rem;
+        margin-top: 5px;
+    }
+    .sign-in-form p {
+        font-size: 0.75rem;
+    }
+    .sign-in-form p a {
+        font-size: 0.75rem;
+    }
+    .sign-in-container{
+        padding: 15px;
+        width: 100%;
+    }
+    .terms-conditions{
+        font-size: 0.75rem;
+    }
+}

@@ -37,6 +37,7 @@ type SummaryEntry = {
 export class DashboardComponent {
   campaigns: Campaign[] = [];
   locations: Locations[] = [];
+  isSideBarVisible: boolean = false;
   currentYear: number = new Date().getFullYear();
   summaryData: { onlineUsers: number, entries: SummaryEntry[] } = { onlineUsers: 0, entries: [] };
   @ViewChild('chartCanvas') chartCanvas!: ElementRef;
@@ -259,4 +260,7 @@ export class DashboardComponent {
     return timeLabels[time] || formattedTime;
   }
 
+  toggleSidebar(): void {
+    this.isSideBarVisible = !this.isSideBarVisible;
+  }
 }

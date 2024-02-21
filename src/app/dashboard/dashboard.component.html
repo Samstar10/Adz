@@ -281,16 +281,16 @@
                     <p class="h-6 font-semibold text-[1rem] text-[#1C1B1F]">Top Device Models</p>
                     <img src="../../assets/cached.png" alt="cached icon" class="w-6 h-6">
                 </div>
-                <div class="flex justify-between items-center m-5 mt-12 mb-20">
-                    <canvas baseChart width="90%" height="28%"
+                <div class="flex justify-between items-center m-5 mt-12">
+                    <canvas baseChart width="250px" height="85px"
                     [data]="horizontalBarChartData"
                     [options]="horizontalBarChartOptions"
                     [type]="'bar'"
                     >
                     </canvas>
                 </div>
-                <div class="flex h-6 ml-5 mt-12">
-                    <p>Last 7 Days</p>
+                <div class="flex relative h-6 ml-5 mt-12">
+                    <p class="inline-block">Last 7 Days</p>
                     <img src="../../assets/arrow_drop_down.png" alt="">
                 </div>
             </div>

@@ -58,6 +58,8 @@
     justify-content: center;
 }
 
+
+
 .description-text-container{
     width: 580px;
     height: 449px;
@@ -237,17 +239,30 @@ button[type="submit"]:hover {
 
 
 @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
+    .description-container{
+        display: none;
     }
-    .description-container,
     .sign-in-container {
       width: 100%;
-      margin-top: 20px;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .sign-in-form-container{
+        width: 100%;
+        max-height: 100%;
+        padding: 20px;
+    }
+    .sign-in-image{
+        width: 200px;
+        height: 200px;
     }
 }
 
-@media screen and (min-width: 960px) and (max-width: 1650px) {
+/* @media screen and (min-width: 960px) and (max-width: 1650px) {
     .container{
         width: 100%;
         height: 100vh;
@@ -265,7 +280,7 @@ button[type="submit"]:hover {
     }
 
     .description-title{
-        font-size: calc(2rem - 0.2rem);
+        font-size: 1rem;
     }
 
     .description-description, .description-text-1, .description-text-2{
@@ -337,5 +352,86 @@ button[type="submit"]:hover {
     }
     .sign-in-form p a {
         font-size: 0.75rem;
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+    .description-container{
+        display: none;
+    }
+    .sign-in-container{
+        width: 100%;
+        padding: 40px;
+    }
+
+    .description-description{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .sign-in-form-container {
+        width: 400px;
+        height: 700px;
+    }
+
+    .sign-in-title {
+        font-size: calc(2rem - 0.2rem);
+    }
+
+    .sign-in-image {
+        width: 300px;
+        height: 300px;
+    }
+    .sign-in-form{
+        height: 300px;
+    }
+    .email-label, label[for="password"] {
+        font-size: 0.75rem;
+        margin-top: 3px;
+    }
+
+    .email-input, input[type="password"] {
+        font-size: 0.75rem;
+        padding: 7.5px;
+        margin-bottom: 12.5px;
+    }
+    hr{
+        margin-bottom: 12.5px;
+    }
+
+    button[type="submit"] {
+        font-size: 0.75rem;
+        padding: 8px 12.5px;
+        font-size: 0.75rem;
+        margin-bottom: 12.5px;
+        height: 40px;
+    }
+    .sign-in-form a {
+        margin-bottom: 12.5px;
+        font-size: 0.75rem;
+        margin-top: 10px;
+    }
+    .sign-in-form p {
+        font-size: 0.75rem;
+    }
+    .sign-in-form p a {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width:960px){
+    .sign-in-image{
+        height: 250px;
+        width: 250px;
+    }
+
+}
+
+@media (min-width:1300px){
+    .container{
+        gap: 30px;
+    }
+    .sign-in-image{
+        height: 250px;
+        width: 250px;
     }
 }

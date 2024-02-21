@@ -15,3 +15,6 @@
   .iti__flag {background-image: url("path/to/flags@2x.png");}
 } */
 
+.my-custom-bg-class{
+  background-image: url("/src/assets/login-img.png");
+}

@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CampaignsComponent } from './campaigns/campaigns.component';
 import { Campaigns2Component } from './campaigns-2/campaigns-2.component';
 import { CampaignsThreeComponent } from './campaigns-three/campaigns-three.component';
+import { CampaignsFourComponent } from './campaigns-four/campaigns-four.component';
 
 export const routes: Routes = [
     {
@@ -50,5 +51,9 @@ export const routes: Routes = [
     {
         path: 'campaigns-3',
         component: CampaignsThreeComponent
+    },
+    {
+        path: 'campaigns-4',
+        component: CampaignsFourComponent
     }
 ];

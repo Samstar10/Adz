@@ -72,42 +72,39 @@
                     <div class="background-img bg-center bg-cover absolute inset-0 z-0"></div>
                     <div class="h-full flex flex-col justify-end p-10 bg-gradient-to-b from-[#1520A6] to-[#FD6A02] opacity-75 absolute inset-0 z-10"></div>
                     <div class="h-full flex flex-col justify-end p-10 relative z-20">
-                        <p class="font-bold text-[1.5rem] text-[#FCFCFC]">Let's begin by</p>
-                        <p class="font-bold text-[1.5rem] text-[#FCFCFC]">Capturing the</p>
-                        <p class="font-bold text-[1.5rem] text-[#FCFCFC]">Campaign</p>
-                        <p class="font-bold text-[1.5rem] text-[#FCFCFC]">Details.</p>
+                        <p class="font-bold text-[1.4rem] text-[#FCFCFC]">Great! Let's</p>
+                        <p class="font-bold text-[1.4rem] text-[#FCFCFC]">Proceed By</p>
+                        <p class="font-bold text-[1.4rem] text-[#FCFCFC]">Capturing the</p>
+                        <p class="font-bold text-[1.4rem] text-[#FCFCFC]">Campaign Files.</p>
                     </div>
                 </div>
                 <div class="w-full lg:w-3/4 flex flex-col px-10 py-10 lg:px-[150px]">
                     <div class="mb-6">
-                        <div class="w-full bg-[#FCFCFC] h-2 mb-2 rounded-[50px]"></div>
-                        <p class="font-normal text-xs">Step 0 of 4 Completed</p>
+                        <div class="w-full bg-[#FCFCFC] h-2 mb-2 rounded-[50px]">
+                            <div class="w-1/4 rounded-[50px] bg-[#FD6A02] h-full"></div>
+                        </div>
+                        <p class="font-normal text-xs">Step 1 of 4 Completed</p>
                     </div>
                     <div class="flex flex-col">
-                        <label for="campaign-title" class="text-[#1C1B1F] font-medium text-sm mb-3">Campaign Title</label>
-                        <input type="text" id="campaign-title w-full" placeholder="Sheshasa Ltd - Effectiveness Survey" class="bg-[#F1F5F7] font-medium text-base mb-3 focus:outline-none">
-                        <hr class="border-[1px] border-[#1C1B1F] mb-5">
-                        <label for="campaign-type" class="text-[#1C1B1F] font-medium text-sm mb-3">Campaign Type</label>
-                        <select name="campaign-type" id="campaign-type" class="bg-[#F1F5F7] font-medium text-base mb-3 focus:outline-none">
-                            <option value="" disabled selected>Survey</option>
-                            <option value="Survey">Survey</option>
-                            <option value="Awareness">Awareness</option>
-                            <option value="Advertising">Advertising</option>
-                        </select>
-                        <hr class="border-[1px] border-[#1C1B1F] mb-5">
-                        <label for="campaign-industry" class="text-[#1C1B1F] font-medium text-sm mb-3">Industry</label>
-                        <select name="campaign-industry" id="campaign-industry" class="bg-[#F1F5F7] font-medium text-base mb-3 focus:outline-none">
-                            <option value="" disabled selected>Technology</option>
-                            <option value="Technology">Technology</option>
-                            <option value="Agriculture">Agriculture</option>
-                            <option value="Engineering">Engineering</option>
-                        </select>
-                        <hr class="border-[1px] border-[#1C1B1F] mb-5">
-                        <label for="campaign-description" class="text-[#1C1B1F] font-medium text-sm mb-3">Description</label>
-                        <input type="text" id="campaign-description" placeholder="Kindly write a description for the campaign" class="bg-[#F1F5F7] font-medium text-base mb-3 focus:outline-none">
-                        <hr class="border-[1px] border-[#1C1B1F] mb-5">
-                        <div class="width-full flex justify-center items-center">
-                            <button type="button" (click)="redirectTo()" class="bg-[#FD6A02] rounded-[50px] px-20 md:px-32 py-1 md:py-3 text-[#FCFCFC] flex justify-center items-center font-bold text-base hover:bg-[#E66800]">Next</button>
+                        <label for="certificate-upload" class="font-medium text-sm text-[#1C1B1F] mb-2">Campaign Logo</label>
+                        <div class="mb-5">
+                            <div class="w-full border-2 flex flex-col h-[139px] justify-center items-center border-[#C2C2C2]">
+                                <input type="file" id="certificate-upload" class="hidden">
+                                <img src="../../assets/Combined shape 10534.png" alt="upload icon" class="mb-3">
+                                <p class="text-[#C2C2C2]">Drop files here or click to upload</p>
+                            </div>
+                        </div>
+                        <label for="certificate-upload" class="font-medium text-sm text-[#1C1B1F] mb-2">Campaign Logo</label>
+                        <div class="mb-10">
+                            <div class="w-full border-2 flex flex-col h-[139px] justify-center items-center border-[#C2C2C2]">
+                                <input type="file" id="certificate-upload" class="hidden">
+                                <img src="../../assets/Combined shape 10534.png" alt="upload icon" class="mb-3">
+                                <p class="text-[#C2C2C2]">Drop files here or click to upload</p>
+                            </div>
+                        </div>
+                        <div class="width-full flex flex-wrap gap-4 xl:gap-10 justify-center items-center">
+                            <button type="button" (click)="redirectBack()" class="bg-[#F1F5F7] rounded-[50px] px-16  py-1 md:py-3 text-[#FD6A02] border-2 border-[#FD6A02] flex justify-center items-center font-bold text-base">Back</button>
+                            <button type="button" (click)="redirectTo()" class="bg-[#FD6A02] rounded-[50px] px-16  py-1 md:py-3 text-[#FCFCFC] border-2 border-[#FD6A02] flex justify-center items-center font-bold text-base hover:bg-[#E66800]">Next</button>
                         </div>
                     </div>
                 </div>

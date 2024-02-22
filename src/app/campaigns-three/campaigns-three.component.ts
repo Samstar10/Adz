@@ -22,6 +22,10 @@ export class CampaignsThreeComponent {
     this.router.navigate(['/campaigns-4']);
   }
 
+  redirectBack(){
+    this.router.navigate(['/campaigns-2']);
+  }
+
   toggleSidebar(): void {
     this.isSideBarVisible = !this.isSideBarVisible;
   }

@@ -1,3 +1,8 @@
 .background-img{
     background-image: url('../../assets/campaigns-background.jpeg');
 }
+
+select:required:invalid{
+    color: #999;
+}
+

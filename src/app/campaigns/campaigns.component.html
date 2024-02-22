@@ -60,20 +60,20 @@
                 <img src="../../assets/settings (1).png" alt="settings icon" class="md:w-9 w-7 md:h-9 h-7">
             </div>
         </header>
-        <div class="mx-4 md:mx-16 my-10">
+        <div class="mx-4 my-10 md:mx-16">
             <div>
-                <h2 class="font-semibold sm:text-4xl mb-5 text-[#1C1B1F]">Campaigns</h2>
+                <h2 class="font-semibold text-2xl md:text-4xl mb-5 text-[#1C1B1F]">Campaigns</h2>
                 <div>
-                    <p class="font-semibold text-base md:text-xs text-[#1C1B1F]">Home  >  <span class="text-[#FD6A02]">Campaigns</span></p>
+                    <p class="font-semibold text-xs md:text-xs text-[#1C1B1F]">Home  >  <span class="text-[#FD6A02]">Campaigns</span></p>
                 </div>
             </div>
-            <div class="block md:flex md:mt-10 gap-5 w-full">
-                <div class="flex w-2/3 mb-5">
+            <div class="block md:flex mt-5 md:mt-10 gap-5 w-full">
+                <div class="flex md:w-2/3 w-full mb-5">
                     <input type="text" placeholder="Search..." class="border-[1px] text-[#85899F] rounded-[50px] h-10 w-full p-5 focus:outline-none">
                 </div>
-                <div class="flex w-1/3">
-                    <button class="w-full flex justify-center items-center gap-[10px] rounded-[50px] font-semibold md:font-semibold md:text-base text-[#FCFCFC] bg-[#FD6A02]" (click)="redirectTo()">
-                        <img src="../../assets/add_circle.png" alt="">
+                <div class="flex flex-wrap md:w-1/3 w-full">
+                    <button class="w-full flex justify-center items-center gap-[10px] rounded-[50px] h-8 md:h-11 font-bold md:font-semibold text-base text-[#FCFCFC] bg-[#FD6A02] hover:bg-[#E66800]" (click)="redirectTo()">
+                        <img src="../../assets/add_circle.png" alt="Add icon">
                         <span>Create A New Campaign</span>
                     </button>
                 </div>

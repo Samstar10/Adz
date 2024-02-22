@@ -18,8 +18,14 @@ export class Campaigns2Component {
 
   currentYear: number = new Date().getFullYear();
 
+  constructor(private router: Router){}
+
   toggleSidebar(): void {
     this.isSideBarVisible = !this.isSideBarVisible;
+  }
+
+  redirectTo(){
+    this.router.navigate(['/campaigns-3']);
   }
 
 }

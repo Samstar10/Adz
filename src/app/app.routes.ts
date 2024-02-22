@@ -7,6 +7,7 @@ import { SignUpStepFourComponent } from './sign-up-step-four/sign-up-step-four.c
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CampaignsComponent } from './campaigns/campaigns.component';
 import { Campaigns2Component } from './campaigns-2/campaigns-2.component';
+import { CampaignsThreeComponent } from './campaigns-three/campaigns-three.component';
 
 export const routes: Routes = [
     {
@@ -45,5 +46,9 @@ export const routes: Routes = [
     {
         path: 'campaigns-2',
         component: Campaigns2Component
+    },
+    {
+        path: 'campaigns-3',
+        component: CampaignsThreeComponent
     }
 ];

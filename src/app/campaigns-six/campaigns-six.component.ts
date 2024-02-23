@@ -25,11 +25,11 @@ export class CampaignsSixComponent {
   }
 
   redirectTo(){
-    this.router.navigate(['/campaigns-6']);
+    this.router.navigate(['/campaigns-7']);
   }
 
   redirectBack(){
-    this.router.navigate(['/campaigns-4']);
+    this.router.navigate(['/campaigns-5']);
   }
 
 }

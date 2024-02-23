@@ -1,1 +1,136 @@
-<p>campaigns-seven works!</p>
+<div class="min-h-screen flex w-screen">
+    <aside [ngClass]="{'hidden': !isSideBarVisible, 'block': isSideBarVisible, 'w-2/5': true, 'max-h-screen': true, 'bg-[#1520A6]': true, 'shadow-md': true, 'z-10': true, 'sticky': true, 'top-0': true}" class="sm:w-52 md:w-72 md:block">
+        <div class="flex justify-center mt-4 mb-2 md:mt-6 md:mb-4">
+            <img src="../../assets/RewardAdz - Logo.png" alt="logo" class="w-3/4 max-w-xs h-auto">
+        </div>
+        <div class="h-[2px] bg-[#FCFCFC] my-2 md:my-4">
+        </div>
+        <a [routerLink]="['/dashboard']" class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70 cursor-pointer">
+            <img src="../../assets/home (1).png" alt="home icon" class="w-6 h-6">
+            <p class="font-medium text-sm md:text-base">Dashboard</p>
+        </a>
+        <a class="flex items-center gap-4 p-4 bg-[#FCFCFC] text-[#1520A6] cursor-pointer">
+            <img src="../../assets/campaign (1).png" alt="campaign icon" class="w-6 h-6">
+            <p class="font-medium text-sm md:text-base">Campaigns</p>
+        </a>
+        <a class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70 cursor-pointer">
+            <img src="../../assets/receipt_long.png" alt="receipt icon" class="w-6 h-6">
+            <p class="font-medium text-sm md:text-base">Transactions</p>
+        </a>
+        <a class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70 cursor-pointer">
+            <img src="../../assets/diversity_2.png" alt="Network icon" class="w-6 h-6">
+            <p class="font-medium text-sm md:text-base">Advertiser Network</p>
+        </a>
+        <a class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70 cursor-pointer">
+            <img src="../../assets/diversity_3.png" alt="Team icon" class="w-6 h-6">
+            <p class="font-medium text-sm md:text-base">My Team</p>
+        </a>
+        <a class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70 cursor-pointer">
+            <img src="../../assets/settings.png" alt="Settings icon" class="w-6 h-6">
+            <p class="font-medium text-sm md:text-base">Settings</p>
+        </a>
+        <div class="flex flex-col sticky bottom-0">
+            <div class="w-56 md:w-80 h-[2px] bg-[#FCFCFC] mt-[350px] md:mt-[290px]">
+            </div>
+            <a href="#" class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70 cursor-pointer">
+                <img src="../../assets/logout.png" alt="Settings icon" class="w-6 h-6">
+                <p class="font-medium text-sm md:text-base">Sign Out</p>
+            </a>
+        </div>
+    </aside>
+    <div class="flex-1 flex flex-col w-4/5">
+        <header class="flex justify-between shadow-md w-screen md:w-full px-2 py-1 md:py-4 md:px-6 bg-[#F1F5F7] sticky top-0 z-30">
+            <button (click)="toggleSidebar()" class="md:hidden"><img src="../../assets/arrow_drop_down.png" alt=""></button>
+            <div class="flex items-center gap-2">
+                <img src="../../assets/sort.png" alt="sort icon" class="hidden md:block mr-4 ml-4 md:mr-6 md:ml-10">
+                <div>
+                    <input type="text" placeholder="Search..." class="hidden md:block sm:ml-4 bg-[#F1F5F7] focus:outline-none">
+                    <div class="w-auto md:w-auto h-[2px] bg-[#1C1B1F]"></div>
+                </div>
+            </div>
+            <div class="flex items-center gap-1 md:gap-1 mr-4 md:mr-10">
+                <img src="../../assets/3f60f9744ac4459d50c7a70d75ca6368.png" alt="South African Flag" class="hidden xl:block w-9 h-9 rounded-full mr-5">
+                <img src="../../assets/fullscreen_exit.png" alt="fullscreen exit icon" class="hidden xl:block w-9 h-9 mr-5">
+                <img src="../../assets/notifications.png" alt="Notifications icon" class="hidden xl:block w-9 h-9 mr-[43px]">
+                <div class="flex items-center gap-2">
+                    <img src="../../assets/Screenshot 2024-02-14 at 12.34.35.png" alt="user profile picture" class="md:w-9 w-7 md:h-9 h-7 rounded-full">
+                    <p class="h-6 font-medium text-xs md:text-base">John Kamara</p>
+                    <img src="../../assets/arrow_drop_down.png" alt="drop-down arrow" class="h-6 w-6">
+                </div>
+                <img src="../../assets/settings (1).png" alt="settings icon" class="md:w-9 w-7 md:h-9 h-7">
+            </div>
+        </header>
+        <div class="flex-1 mx-4 my-10 md:mx-16">
+            <div class="mb-10">
+                <h2 class="font-semibold text-2xl md:text-4xl mb-5 text-[#1C1B1F]">Campaigns</h2>
+                <div>
+                    <p class="font-semibold text-xs md:text-xs text-[#1C1B1F]">Home  >  Campaigns > <span class="text-[#FD6A02]">New Campaign</span></p>
+                </div>
+            </div>
+            <div class="flex flex-1 justify-between w-full bg-[#F1F5F7] rounded-[50px] md:h-[604px]">
+                <div class="w-1/4 hidden lg:block relative rounded-l-[50px] overflow-hidden">
+                    <div class="background-img bg-center bg-cover absolute inset-0 z-0"></div>
+                    <div class="h-5/6 flex flex-col mt-auto rounded-l-[50px] p-10 bg-gradient-to-b from-[#1520A6] to-[#FD6A02] opacity-75 absolute inset-0 z-10"></div>
+                    <div class="h-full flex flex-col justify-end p-10 relative z-20">
+                        <p class="font-bold text-[1.4rem] text-[#FCFCFC]">Great! Add</p>
+                        <p class="font-bold text-[1.4rem] text-[#FCFCFC]">Questions for</p>
+                        <p class="font-bold text-[1.4rem] text-[#FCFCFC]">Your Video</p>
+                    </div>
+                </div>
+                <div class="w-full flex-1 lg:overflow-y-scroll hide-scrollbar lg:w-3/4 flex flex-col px-10 py-10 lg:px-[150px]">
+                    <div class="mb-6">
+                        <div class="w-full bg-[#FCFCFC] h-2 mb-2 rounded-[50px]">
+                            <div class="w-3/4 rounded-[50px] bg-[#FD6A02] h-full"></div>
+                        </div>
+                        <p class="font-normal text-xs">Step 3 of 4 Completed</p>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <label for="targeted-gender" class="font-medium text-sm text-[#1C1B1F] mb-3">Total Budget</label>
+                        <select name="targeted-gender" id="targeted-gender" class="bg-inherit mb-2 focus:outline-none">
+                            <option value="100,000">ZAR. 100,000</option>
+                            <option value="200,000">ZAR. 200,000</option>
+                            <option value="300,000">ZAR. 300,000+</option>
+                        </select>
+                        <hr class="border-[1px] border-[#1C1B1F] mb-5">
+                        <label for="targeted-gender" class="font-medium text-sm text-[#1C1B1F] mb-3">Daily Budget</label>
+                        <select name="targeted-gender" id="targeted-gender" class="bg-inherit mb-2 focus:outline-none">
+                            <option value="100,000">ZAR. 100,000</option>
+                            <option value="200,000">ZAR. 200,000</option>
+                            <option value="300,000">ZAR. 300,000+</option>
+                        </select>
+                        <hr class="border-[1px] border-[#1C1B1F] mb-5">
+                        <label for="targeted-gender" class="font-medium text-sm text-[#1C1B1F] mb-3">Payout</label>
+                        <select name="targeted-gender" id="targeted-gender" class="bg-inherit mb-2 focus:outline-none">
+                            <option value="100,000">ZAR. 100,000</option>
+                            <option value="200,000">ZAR. 200,000</option>
+                            <option value="300,000">ZAR. 300,000+</option>
+                        </select>
+                        <hr class="border-[1px] border-[#1C1B1F] mb-10 sm:mb-36 xl:mb-48">
+                        <div class="width-full mt-auto flex flex-wrap gap-4 xl:gap-10 justify-center items-center">
+                            <button type="button" (click)="redirectBack()" class="bg-[#F1F5F7] rounded-[50px] px-16  py-1 md:py-3 text-[#FD6A02] border-2 border-[#FD6A02] flex justify-center items-center font-bold text-base">Back</button>
+                            <button type="button" (click)="redirectTo()" class="bg-[#FD6A02] rounded-[50px] px-16  py-1 md:py-3 text-[#FCFCFC] border-2 border-[#FD6A02] flex justify-center items-center font-bold text-base hover:bg-[#E66800]">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="max-w-full w-screen md:w-full h-[50px] bg-[#F1F5F7] mt-20 pr-4 md:pr-20 pl-4 md:pl-20 flex justify-between items-center">
+                <div class="max-w-6xl mx-auto w-full flex justify-between items-center">
+                    <div class="h-[21px]">
+                        <p class="font-normal text-xs md:text-sm text-[#1C1B1F]">{{currentYear}} &copy; RewardAdz. All Rights Reserved.</p>
+                    </div>
+                    <div>
+                        <p class="font-normal text-xs md:text-sm text-[#1C1B1F]">Terms and Conditions | Privacy Policy</p>
+                    </div>
+                    <div class="flex gap-[5px] h-[14px]">
+                        <a href=""><img src="../../assets/Facebook - Negative.png" alt=""></a>
+                        <a href=""><img src="../../assets/Twitter - Negative.png" alt=""></a>
+                        <a href=""><img src="../../assets/Instagram - Negative.png" alt=""></a>
+                        <a href=""><img src="../../assets/LinkedIn - Negative.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>

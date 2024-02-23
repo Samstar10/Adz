@@ -24,11 +24,11 @@ export class CampaignsFourComponent {
   }
 
   redirectTo(){
-    this.router.navigate(['/campaigns-3']);
+    this.router.navigate(['/campaigns-5']);
   }
 
   redirectBack(){
-    this.router.navigate(['/campaigns-2']);
+    this.router.navigate(['/campaigns-3']);
   }
 
 }

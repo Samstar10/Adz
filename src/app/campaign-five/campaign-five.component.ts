@@ -28,7 +28,7 @@ export class CampaignFiveComponent {
   }
 
   redirectBack(){
-    this.router.navigate(['/campaigns-3']);
+    this.router.navigate(['/campaigns-4']);
   }
 
 }

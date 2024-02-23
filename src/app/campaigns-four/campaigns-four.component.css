@@ -1,3 +1,17 @@
 .background-img{
     background-image: url('../../assets/campaigns-background.jpeg');
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar (IE, Edge) */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+  }
+
+  /* Hide scrollbar (Firefox) */
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }

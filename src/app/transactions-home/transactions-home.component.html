@@ -9,12 +9,12 @@
             <img src="../../assets/home (1).png" alt="home icon" class="w-6 h-6">
             <p class="font-medium text-sm md:text-base">Dashboard</p>
         </a>
-        <a class="flex items-center gap-4 p-4 bg-[#FCFCFC] text-[#1520A6] cursor-pointer">
-            <img src="../../assets/campaign (1).png" alt="campaign icon" class="w-6 h-6">
+        <a [routerLink]="['/campaigns']"  class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70 cursor-pointer">
+            <img src="../../assets/campaign.png" alt="campaign icon" class="w-6 h-6">
             <p class="font-medium text-sm md:text-base">Campaigns</p>
         </a>
-        <a class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70 cursor-pointer">
-            <img src="../../assets/receipt_long.png" alt="receipt icon" class="w-6 h-6">
+        <a class="flex items-center gap-4 p-4 bg-[#FCFCFC] text-[#1520A6] cursor-pointer">
+            <img src="../../assets/receipt_long (1).png" alt="receipt icon" class="w-6 h-6">
             <p class="font-medium text-sm md:text-base">Transactions</p>
         </a>
         <a class="flex items-center gap-4 p-4 text-[#FCFCFC] hover:opacity-70 cursor-pointer">
@@ -62,13 +62,225 @@
         </header>
         <div class="mx-4 my-10 md:mx-16">
             <div>
-                <h2 class="font-semibold text-2xl md:text-4xl mb-5 text-[#1C1B1F]">Campaigns</h2>
+                <h2 class="font-semibold text-2xl md:text-4xl mb-5 text-[#1C1B1F]">Transactions/Wallet</h2>
                 <div>
-                    <p class="font-semibold text-xs md:text-xs text-[#1C1B1F]">Home  >  <span class="text-[#FD6A02]">Campaigns</span></p>
+                    <p class="font-semibold text-xs md:text-xs text-[#1C1B1F]">Home  >  <span class="text-[#FD6A02]">Transactions</span></p>
                 </div>
             </div>
-            <div class="block md:flex mt-5 md:mt-10 gap-5 w-full">
-                
+            <div class="block md:flex flex-wrap mt-5 md:mt-10 gap-5 w-full">
+                <div class="w-full xl:w-[32%]">
+                    <div class="p-5 rounded-3xl bg-[#F3F3F3] border-2 border-[#DFDFDF]">
+                        <div class="flex justify-between mb-5">
+                            <h5 class="font-medium text-base text-[#1C1B1F]">Wallet Balance</h5>
+                            <div class="w-[66px] h-6 rounded-[50px] bg-[#30A245] bg-opacity-20 flex justify-center items-center">
+                                <p class="w-[42px] h-3 font-semibold text-[8px] text-[#30A245]">+100.00%</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <p><span class="font-bold text-xl text-[#1C1B1F]">16,050.33</span> <span class="text-sm font-bold text-[#1C1B1F]">KES</span> <span class="font-bold text-sm text-[#85899F]">/ 84,050.00 KES</span></p>
+                        </div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-normal text-xs text-[#959595]">This Month</span>
+                            <img src="../../assets/graphs.png" alt="">
+                        </div>
+                        <div class="flex justify-between items-center mb-5">
+                            <div class="flex justify-between items-center gap-1">
+                                <img src="../../assets/south.png" alt="" class="bg-[#30A245] h-8 p-2">
+                                <div class="w-full">
+                                    <p class="text-sm font-bold text-[#1C1B1F]"><span>68,000.</span><span class="text-xs">65 KES</span></p>
+                                    <p class="text-xs font-normal text-[#959595]">Deposits</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center gap-1">
+                                <img src="../../assets/north.png" alt="" class="bg-[#CC142B] h-8 p-2">
+                                <div class="w-full">
+                                    <p class="text-sm font-bold text-[#1C1B1F]"><span>51,950.</span><span class="text-xs">33 KES</span></p>
+                                    <p class="text-xs font-normal text-[#959595]">Payouts</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="w-full bg-[#FD6A02] rounded-[50px] font-bold text-sm text-[#FCFCFC] py-1 hover:bg-[#E66800]">Add Funds</button>
+                            <button class="w-full bg-inherit border-2 border-[#FD6A02] rounded-[50px] font-bold text-sm text-[#FD6A02] py-1 mt-3">Request Statement</button>
+                        </div>        
+                    </div>
+                </div>
+                <div class="w-full xl:w-[64%] p-5 rounded-3xl bg-[#F3F3F3] border-2 border-[#DFDFDF]">
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="border-[1px] border-[#C2C2C2] p-2 w-11/12">
+                            <input type="text" placeholder="Search..." class="bg-inherit w-full focus:outline-none text-sm">
+                        </div>
+                        <div class="border-[1px] border-[#C2C2C2] p-2">
+                            <img src="../../assets/calendar_month.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-bold text-l text-[#040707]">Recent Activity</h4>
+                        <p class="font-bold text-xs text-[#040707]">View All</p>
+                    </div>
+                    <div class="h-[1px] bg-[#C2C2C2] rounded-[50px] mb-3">
+                    </div>
+                    <div class="space-y-3 mb-5">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="../../assets/transactions.jpeg" alt="" class="h-8">
+                                <div>
+                                    <p class="font-medium text-base text-[#040707]">James Ayugi</p>
+                                    <p class="font-medium text-[8px] text-[#959595]">KD34567OP89</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div class="flex flex-col items-end">
+                                    <p class="font-bold text-xs text-[#EA4335]">- KES. 10.00</p>
+                                    <p class="font-bold text-xs text-[#959595]">4 MAY 2023 12:20PM</p>
+                                </div>
+                                <div>
+                                    <img src="../../assets/arrow_right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="../../assets/south.png" alt="" class="bg-[#30A245] h-8 p-2">
+                                <div>
+                                    <p class="font-medium text-base text-[#040707]">Deposits</p>
+                                    <p class="font-medium text-[8px] text-[#959595]">KD34567OP89</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div class="flex flex-col items-end">
+                                    <p class="font-bold text-xs text-[#30A245]">+ KES. 1000.00</p>
+                                    <p class="font-bold text-xs text-[#959595]">22 SEP 2023 12:20PM</p>
+                                </div>
+                                <div>
+                                    <img src="../../assets/arrow_right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="../../assets/transaction-2.jpeg" alt="" class="h-8 w-8">
+                                <div>
+                                    <p class="font-medium text-base text-[#040707]">Jean Wairimu</p>
+                                    <p class="font-medium text-[8px] text-[#959595]">KD34567OP89</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div class="flex flex-col items-end">
+                                    <p class="font-bold text-xs text-[#EA4335]">- KES. 10.00</p>
+                                    <p class="font-bold text-xs text-[#959595]">4 MAY 2023 12:20PM</p>
+                                </div>
+                                <div>
+                                    <img src="../../assets/arrow_right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="../../assets/transaction-3.jpeg" alt="" class="h-8 w-8">
+                                <div>
+                                    <p class="font-medium text-base text-[#040707]">Joseph Maamun</p>
+                                    <p class="font-medium text-[8px] text-[#959595]">KD34567OP89</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div class="flex flex-col items-end">
+                                    <p class="font-bold text-xs text-[#EA4335]">- KES. 10.00</p>
+                                    <p class="font-bold text-xs text-[#959595]">4 MAY 2023 12:20PM</p>
+                                </div>
+                                <div>
+                                    <img src="../../assets/arrow_right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="../../assets/south.png" alt="" class="bg-[#30A245] h-8 p-2">
+                                <div>
+                                    <p class="font-medium text-base text-[#040707]">Deposits</p>
+                                    <p class="font-medium text-[8px] text-[#959595]">KD34567OP89</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div class="flex flex-col items-end">
+                                    <p class="font-bold text-xs text-[#30A245]">+ KES. 1000.00</p>
+                                    <p class="font-bold text-xs text-[#959595]">22 SEP 2023 12:20PM</p>
+                                </div>
+                                <div>
+                                    <img src="../../assets/arrow_right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="../../assets/transaction-4.jpeg" alt="" class="h-8 w-8">
+                                <div>
+                                    <p class="font-medium text-base text-[#040707]">Kimberly Aroga</p>
+                                    <p class="font-medium text-[8px] text-[#959595]">KD34567OP89</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div class="flex flex-col items-end">
+                                    <p class="font-bold text-xs text-[#EA4335]">- KES. 10.00</p>
+                                    <p class="font-bold text-xs text-[#959595]">4 MAY 2023 12:20PM</p>
+                                </div>
+                                <div>
+                                    <img src="../../assets/arrow_right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="../../assets/south.png" alt="" class="bg-[#30A245] h-8 p-2">
+                                <div>
+                                    <p class="font-medium text-base text-[#040707]">Deposits</p>
+                                    <p class="font-medium text-[8px] text-[#959595]">KD34567OP89</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div class="flex flex-col items-end">
+                                    <p class="font-bold text-xs text-[#30A245]">+ KES. 1000.00</p>
+                                    <p class="font-bold text-xs text-[#959595]">22 SEP 2023 12:20PM</p>
+                                </div>
+                                <div>
+                                    <img src="../../assets/arrow_right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="../../assets/south.png" alt="" class="bg-[#30A245] h-8 p-2">
+                                <div>
+                                    <p class="font-medium text-base text-[#040707]">Deposits</p>
+                                    <p class="font-medium text-[8px] text-[#959595]">KD34567OP89</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div class="flex flex-col items-end">
+                                    <p class="font-bold text-xs text-[#30A245]">+ KES. 1000.00</p>
+                                    <p class="font-bold text-xs text-[#959595]">22 SEP 2023 12:20PM</p>
+                                </div>
+                                <div>
+                                    <img src="../../assets/arrow_right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end gap-3 xl:gap-5">
+                        <div class="border-[1px] border-[#FD6A02] rounded w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center">
+                            <p class="text-[#FD6A02] font-semibold text-base">1</p>
+                        </div>
+                        <div class="border-[1px] border-[#1C1B1F] rounded w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center">
+                            <p class="text-[#1C1B1F] font-semibold text-base">2</p>
+                        </div>
+                        <div class="border-[1px] border-[#1C1B1F] rounded w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center">
+                            <p class="text-[#1C1B1F] font-semibold text-base">3</p>
+                        </div>
+                        <div class="border-[1px] border-[#1C1B1F] rounded w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center">
+                            <img src="../../assets/navigate_next.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <footer>

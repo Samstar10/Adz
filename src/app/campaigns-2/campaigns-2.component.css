@@ -6,3 +6,7 @@ select:required:invalid{
     color: #999;
 }
 
+option[value=""][disabled] {
+    display: none;
+}
+

@@ -86,7 +86,8 @@
                     </div>
                     <div class="flex flex-col justify-center">
                         <label for="targeted-gender" class="font-medium text-sm text-[#1C1B1F] mb-3">Select Targeted Gender</label>
-                        <select name="targeted-gender" id="targeted-gender" class="bg-inherit mb-2 focus:outline-none">
+                        <select name="targeted-gender" id="targeted-gender" required class="bg-inherit mb-2 focus:outline-none">
+                            <option value="" disabled selected>Male</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="Other">Other</option>

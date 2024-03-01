@@ -37,6 +37,20 @@
       "companyByLaws": "C:\\fakepath\\Screenshot 2024-02-19 at 10.54.12.png",
       "companyLogo": "C:\\fakepath\\Screenshot 2024-02-19 at 12.06.36.png",
       "companyThemeColor": "#b82e2e"
+    },
+    {
+      "id": "beba",
+      "companyName": "WinnieAchibz Ltd",
+      "companyEmail": "winnie@winnie.com",
+      "adminUsername": "winnie",
+      "phoneNumber": "0712345678",
+      "password": "123456",
+      "companySize": "0-50",
+      "currency": "USD",
+      "certOfRegistration": "C:\\fakepath\\Screenshot 2024-02-16 at 09.28.31.png",
+      "companyByLaws": "C:\\fakepath\\Screenshot 2024-02-18 at 19.44.25.png",
+      "companyLogo": "C:\\fakepath\\Screenshot 2024-02-16 at 14.02.34.png",
+      "companyThemeColor": "#17d714"
     }
   ],
   "viewers": [
